@@ -1,0 +1,29 @@
+#NMAP
+-h: Print a help summary page
+
+-sS: Perform a TCP SYN scan
+
+-sU: Perform a UDP scan
+
+-sV: Probe open ports to determine service/version info
+
+-O: Enable OS detection
+
+-v: Enable verbosity. You can even set the verbosity level as such :
+-vv: Level 2 verbosity. The minimum level of verbosity advised for use.
+-v3: Level 3 verbosity. You can always specify the verbosity level by specifying a number like this.
+
+-oA: Same Nmap output in “normal”, XML and grepable formats. However you can specify the format of your choice with :
+-oN: Redirect normal output -h: Print a help summary page
+-oX: Produce output in a clean, XML format and store it in a given file
+-oG: Produce “grepable” output and store it to a file. Deprecated format as users are now moving towards XML outputs.
+
+
+
+-A: Enables “aggressive” scanning. Presently this enables OS detection (-O), version scanning (-sV), script scanning (-sC) and traceroute (–traceroute)
+
+-p: Specify the ports to scan. It can be a single port as well as a range of ports. For Example :
+nmap -p 80 127.0.0.0.1: This scans port 80 on localhost
+nmap -p 1-100 127.0.0.1: This scans ports from 1 to 100 on localhost
+nmap -p- 127.0.0.1: This scans all the ports on the localhost a given filename
+
